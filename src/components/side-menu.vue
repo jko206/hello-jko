@@ -1,11 +1,11 @@
 <template>
   <nav class="side-menu">
-    <a href="/about">About</a>
-    <a href="/timeline">Timeline</a>
-    <a href="/sketches">Sketches</a>
-    <a href="/projects">Projects</a>
-    <a href="/thoughts">Thoughts</a>
-    <a href="/links-contacts">Links &amp; Contacts</a>
+    <router-link to="/about">About</router-link>
+    <router-link to="/timeline">Timeline</router-link>
+    <router-link to="/sketches">Sketches</router-link>
+    <router-link to="/projects">Projects</router-link>
+    <router-link to="/thoughts">Thoughts</router-link>
+    <router-link to="/links-contacts">Links &amp; Contacts</router-link>
   </nav>
 </template>
 

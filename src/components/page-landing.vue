@@ -1,0 +1,15 @@
+<template>
+  <div>
+    Landing
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'PageAbout'
+}
+</script>
+
+<style>
+
+</style>
