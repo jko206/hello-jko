@@ -1,6 +1,11 @@
 <template>
-  <div>
-    Landing
+  <div class="page-landing">
+    <h1>
+      Welcome.
+    </h1>
+    <span>
+      Let's learn about J
+    </span>
   </div>
 </template>
 
@@ -10,6 +15,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.page-landing {
+  padding-top: 200px;
 
+  span {
+    display: block;
+  }
+}
 </style>

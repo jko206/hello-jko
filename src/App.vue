@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <side-menu />
-    <router-view />
+    <side-menu class="side-menu" />
+    <router-view class="main" />
   </div>
 </template>
 
@@ -16,8 +16,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import './style/global.scss';
 @import './style/default.scss';
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  
+  .side-menu {
+    flex: 0 0 200px;
+  }
+  .main {
+    flex: 1 1 auto;
+  }
+}
 
 </style>
