@@ -14,6 +14,10 @@
         <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
       </li>
       <li>
+        <a href="JAI_KO.pdf">Résumé</a>
+        <a href="JAI_KO.pdf" download="" class="button">download</a>
+      </li>
+      <li>
         <a href="mailto:just.jai.ko@gmail.com">
           Email
         </a>
@@ -42,7 +46,6 @@
 </template>
 
 <script>
-
 function copy(val) {
   return navigator.clipboard.writeText(val)
 }
@@ -52,7 +55,6 @@ export default {
   methods: {
     copy(entity) {
       const value = entity === 'phone' ? '4252205899' : 'just.jai.ko@gmail.com'
-      // eslint-disable-next-line
       copy(value)
         .then(() => {
           alert('success')
@@ -66,7 +68,37 @@ export default {
 </script>
 <style lang="scss" scoped>
 .page-links-contacts ul {
-  padding: 0;
   list-style: none;
+}
+a {
+    display: inline-block;
+    padding: 10px;
+    width: 200px;
+    border-left: 3px solid transparent;
+    &:hover {
+      border-color: #333;
+    }
+}
+
+button, .button {
+  padding: 0 1em;
+  width: 100px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 1em;
+  background: inherit;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0;
+  outline: none;
+  li:hover & {
+    opacity: 1;
+  }
+  &:hover {
+    border: 1px solid #333;
+    border-radius: 3px;
+  }
 }
 </style>
