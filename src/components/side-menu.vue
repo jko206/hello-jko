@@ -4,7 +4,7 @@
     <router-link to="/timeline">Timeline</router-link>
     <router-link to="/sketches">Sketches</router-link>
     <router-link to="/projects">Projects</router-link>
-    <router-link to="/thoughts">Thoughts</router-link>
+    <!-- <router-link to="/thoughts">Thoughts</router-link> -->
     <router-link to="/links-contacts">Links &amp; Contacts</router-link>
   </nav>
 </template>
