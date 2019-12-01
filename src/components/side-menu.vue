@@ -30,7 +30,7 @@ export default {
     border-left: 5px solid gray;
   }
 
-  &.active {
+  &.router-link-active {
     color: #333;
     border-color: #333;
   }
