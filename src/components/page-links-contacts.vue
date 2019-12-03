@@ -1,47 +1,55 @@
 <template>
   <div class="page-links-contacts">
-    <ul>
-      <li>
-        <a href="http://linkedin.com/in/jai-ko" target="blank">LinkedIn</a>
-      </li>
-      <li>
-        <a href="http://github.com/jaiko86" target="blank">Github</a>
-      </li>
-      <li>
-        <a href="https://stackoverflow.com/users/458425/j-ko?tab=profile" target="blank">StackOverflow</a>
-      </li>
-      <li>
-        <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
-      </li>
-      <li>
-        <a href="JAI_KO.pdf">Résumé</a>
-        <a href="JAI_KO.pdf" download="" class="button">download</a>
-      </li>
-      <li>
-        <a href="mailto:just.jai.ko@gmail.com">
-          Email
-        </a>
-        <button @click.stop="copy('email')">
-          copy
-        </button>
-      </li>
-      <li>
-        <a href="sms:+14252205899">
-          Text
-        </a>
-        <button @click.stop="copy('phone')">
-          copy
-        </button>
-      </li>
-      <li>
-        <a href="tel:+14252205899">
-          Phone
-        </a>
-        <button @click.stop="copy('phone')">
-          copy
-        </button>
-      </li>
-    </ul>
+    <div class="col1">
+      <h2>Links</h2>
+      <ul>
+        <li>
+          <a href="http://linkedin.com/in/jai-ko" target="blank">LinkedIn</a>
+        </li>
+        <li>
+          <a href="http://github.com/jaiko86" target="blank">Github</a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/458425/j-ko?tab=profile" target="blank">StackOverflow</a>
+        </li>
+        <li>
+          <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
+        </li>
+        <li>
+          <a href="JAI_KO.pdf">Résumé</a>
+          <a href="JAI_KO.pdf" download="" class="button">download</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col2">
+      <h2>Contacts</h2>
+      <ul>
+        <li>
+          <a href="mailto:just.jai.ko@gmail.com">
+            Email
+          </a>
+          <button @click.stop="copy('email')">
+            copy
+          </button>
+        </li>
+        <li>
+          <a href="sms:+14252205899">
+            Text
+          </a>
+          <button @click.stop="copy('phone')">
+            copy
+          </button>
+        </li>
+        <li>
+          <a href="tel:+14252205899">
+            Phone
+          </a>
+          <button @click.stop="copy('phone')">
+            copy
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -67,7 +75,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.page-links-contacts ul {
+.page-links-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
   list-style: none;
 }
 a {
@@ -88,15 +101,17 @@ button, .button {
   border: 0;
   font-size: 1em;
   background: inherit;
-  color: inherit;
+  color: #808080;
   font-family: inherit;
   cursor: pointer;
   opacity: 0;
   outline: none;
+  border: 1px solid transparent;
   li:hover & {
     opacity: 1;
   }
   &:hover {
+    color: #333;
     border: 1px solid #333;
     border-radius: 3px;
   }

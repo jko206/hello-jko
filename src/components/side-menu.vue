@@ -1,7 +1,7 @@
 <template>
   <nav class="side-menu">
     <router-link to="/about">About</router-link>
-    <router-link to="/timeline">Timeline</router-link>
+    <router-link to="/timeline">Dev Journey</router-link>
     <router-link to="/sketches">Sketches</router-link>
     <router-link to="/projects">Projects</router-link>
     <!-- <router-link to="/thoughts">Thoughts</router-link> -->
