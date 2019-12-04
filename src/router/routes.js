@@ -4,6 +4,7 @@ export default [
   { path: '/timeline', component: () => import('../components/page-timeline.vue') },
   { path: '/sketches', component: () => import('../components/page-sketches.vue') },
   { path: '/projects', component: () => import('../components/page-projects.vue') },
+  { path: '/work', component: () => import('../components/page-work.vue') },
   { path: '/thoughts', component: () => import('../components/page-thoughts.vue') },
   { path: '/links-contacts', component: () => import('../components/page-links-contacts.vue') },
 ]
