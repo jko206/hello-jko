@@ -3,6 +3,10 @@ a {
   color: #333;
 }
 
+p {
+  line-height: 2.25;
+}
+
 $menuWidth: 200px;
 $h1-height: 44px;
 $h1-padding: 20px;
@@ -21,6 +25,17 @@ $h1-padding: 20px;
     max-width: 700px;
     &.double-col {
       column-count: 2;
+    }
+    &.faux-double-col {
+      width: 50%;
+    }
+    &.perfect-double-col {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 40px;
+      p {
+        margin: 0;
+      }
     }
   }
   &.full-height {
