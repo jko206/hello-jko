@@ -38,6 +38,9 @@
           <li>
             <strong>Games</strong> Tetris (expert), Vainglory (expert)
           </li>
+          <li>
+            <strong>Interests</strong> Science, technology, business, politics, money, economy
+          </li>
         </ul>
       </div>
     </div>
