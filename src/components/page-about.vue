@@ -1,37 +1,45 @@
 <template>
   <div class="page-about">
-    <img 
-      src="../assets/family.jpg" 
-      alt="Ko family" 
-      class="main-photo" 
-      title="At a pumpkin patch in Concord, CA, in 2019"
-    />
-    <div class="profile">
+    <div class="image-wrapper">
+      <img 
+        src="../assets/family.jpg" 
+        alt="Ko family" 
+        class="main-photo" 
+        title="At a pumpkin patch in Concord, CA, in 2019"
+      />
+    </div>
+    <div class="content-block">
       <h2>
         Basics
       </h2>
-      <ul>
-        <li>
-          <strong>Name</strong> Jai Ko
-        </li>
-        <li>
-          <strong>Role</strong> Fullstack / Frontend Developer
-        </li>
-        <li>
-          <strong>Expertise</strong> HTML / CSS / JavaScript / Vue
-        </li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li>
+            <strong>Name</strong> Jai Ko
+          </li>
+          <li>
+            <strong>Role</strong> Fullstack / Frontend Developer
+          </li>
+          <li>
+            <strong>Expertise</strong> HTML / CSS / JavaScript / Vue
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-block">
       <h2>
         Personal
       </h2>
-      <ul>
-        <li>
-          <strong>Hobbies</strong> Programming, solving puzzles, woodworking
-        </li>
-        <li>
-          <strong>Games</strong> Tetris (expert), Vainglory (expert)
-        </li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li>
+            <strong>Hobbies</strong> Programming, solving puzzles, woodworking
+          </li>
+          <li>
+            <strong>Games</strong> Tetris (expert), Vainglory (expert)
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -43,10 +51,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-about {
-  display: grid;
-  grid-column-gap: 30px;
-  grid-template-columns: 400px auto;
+@import '../style/global';
+
+.image-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 ul {
@@ -60,7 +71,7 @@ strong {
 }
 
 .main-photo {
-  width: 100%;
+  height: 300px;
 }
 p {
   max-width: 600px;

@@ -1,54 +1,58 @@
 <template>
   <div class="page-links-contacts">
-    <div class="col1">
+    <div class="content-block">
       <h2>Links</h2>
-      <ul>
-        <li>
-          <a href="http://linkedin.com/in/jai-ko" target="blank">LinkedIn</a>
-        </li>
-        <li>
-          <a href="http://github.com/jaiko86" target="blank">Github</a>
-        </li>
-        <li>
-          <a href="https://stackoverflow.com/users/458425/j-ko?tab=profile" target="blank">StackOverflow</a>
-        </li>
-        <li>
-          <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
-        </li>
-        <li>
-          <a href="JAI_KO.pdf">Résumé</a>
-          <a href="JAI_KO.pdf" download="" class="button">download</a>
-        </li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li>
+            <a href="http://linkedin.com/in/jai-ko" target="blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="http://github.com/jaiko86" target="blank">Github</a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/458425/j-ko?tab=profile" target="blank">StackOverflow</a>
+          </li>
+          <li>
+            <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
+          </li>
+          <li>
+            <a href="JAI_KO.pdf">Résumé</a>
+            <a href="JAI_KO.pdf" download="" class="button">download</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="col2">
+    <div class="content-block">
       <h2>Contacts</h2>
-      <ul>
-        <li>
-          <a href="mailto:just.jai.ko@gmail.com">
-            Email
-          </a>
-          <button @click.stop="copy('email')">
-            copy
-          </button>
-        </li>
-        <li>
-          <a href="sms:+14252205899">
-            Text
-          </a>
-          <button @click.stop="copy('phone')">
-            copy
-          </button>
-        </li>
-        <li>
-          <a href="tel:+14252205899">
-            Phone
-          </a>
-          <button @click.stop="copy('phone')">
-            copy
-          </button>
-        </li>
-      </ul>
+      <div class="content">
+        <ul>
+          <li>
+            <a href="mailto:just.jai.ko@gmail.com">
+              Email
+            </a>
+            <button @click.stop="copy('email')">
+              copy
+            </button>
+          </li>
+          <li>
+            <a href="sms:+14252205899">
+              Text
+            </a>
+            <button @click.stop="copy('phone')">
+              copy
+            </button>
+          </li>
+          <li>
+            <a href="tel:+14252205899">
+              Phone
+            </a>
+            <button @click.stop="copy('phone')">
+              copy
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -75,13 +79,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.page-links-contacts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
     display: inline-block;

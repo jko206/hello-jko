@@ -16,23 +16,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.side-menu a {
-  display: block;
-  font-size: 20px;
-  padding: 10px;
-  color: gray;
-  border-left: 5px solid transparent;
-  &:not(:first-of-type) {
-    margin-top: 10px;
-  }
+@import '../style/global.scss';
 
-  &:hover {
-    border-left: 5px solid gray;
-  }
+.side-menu {
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: $menuWidth;
+  background: #333;
+  height: 100vh;
+  a {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    border-left: 5px solid transparent;
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
 
-  &.router-link-active {
-    color: #333;
-    border-color: #333;
+    &:hover {
+      border-color: gray;
+    }
+
+    &.router-link-active {
+      border-color: white;
+    }
   }
 }
+
 </style>

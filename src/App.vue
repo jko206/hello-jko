@@ -1,10 +1,20 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'show-menu' : isMenuOpen }" @click="isMenuOpen = false">
+    <button class="side-menu-toggle" @click.stop="isMenuOpen = !isMenuOpen">
+      *
+    </button>
     <side-menu class="side-menu" />
-    <h1>
-      {{ title }}
-    </h1>
-    <router-view class="main" />
+    <div class="main-wrapper">
+      <div class="content-block">
+        <span></span>
+        <div class="content">
+          <h1>
+            {{ title }}
+          </h1>
+        </div>
+      </div>
+      <router-view class="main" />
+    </div>
   </div>
 </template>
 
@@ -15,6 +25,11 @@ export default {
   name: 'app',
   components: {
     SideMenu,
+  },
+  data() {
+    return {
+      isMenuOpen: false,
+    }
   },
   computed: {
     title() {
@@ -46,25 +61,58 @@ export default {
 @import './style/global.scss';
 @import './style/default.scss';
 
-#app {
-  display: grid;
-  grid-template-areas: 
-    "side-menu title"
-    "side-menu main";
-  grid-template-columns: 200px auto;
-  grid-template-rows: 50px auto;
-  height: 100vh;
-  width: 100vw;
-  
-  .side-menu {
-    grid-area: side-menu;
+$toggleLeft: 20px;
+$toggleTop: 20px;
+
+.main-wrapper {
+  box-shadow: #7098bb -3px -1px 10px;
+  position: relative;
+  left: 0;
+  min-height: 100vh;
+  transition: left 0.1s ease-in-out;
+  background: white;
+  .show-menu & {
+    left: $menuWidth;
+    width: calc(100% - #{$menuWidth});
   }
-  h1 {
-    margin: 0;
+}
+.side-menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  font-size: 35px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  color: #2c3e50;
+
+  &:hover {
+    color: #2c3e50;
   }
-  .main {
-    grid-area: main;
+
+  .show-menu & {
+    left: $menuWidth + $toggleLeft
   }
+}
+h1 {
+  box-sizing: border-box;
+  margin: 0;
+  background: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.main {
+  z-index: 10;
 }
 
 </style>

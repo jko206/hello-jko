@@ -2,3 +2,21 @@ a {
   text-decoration: none;
   color: #333;
 }
+
+$menuWidth: 200px;
+$h1-height: 44px;
+
+.content-block {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column-gap: 100px;
+  align-items: center;
+
+  h2 {
+    text-align: right;
+  }
+  .content {
+    max-width: 700px;
+  }
+}
