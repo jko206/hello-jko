@@ -19,6 +19,9 @@ $h1-padding: 20px;
   }
   .content {
     max-width: 700px;
+    &.double-col {
+      column-count: 2;
+    }
   }
   &.full-height {
     height: calc(100vh - #{$h1-height + 2 * $h1-padding});
