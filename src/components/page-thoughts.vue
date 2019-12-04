@@ -1,7 +1,7 @@
 <template>
   <div class="page-thoughts">
     <div class="content-block full-height">
-      <h2>Nothing's here <br /> yet</h2>
+      <h2>Nothing's here yet</h2>
       <div class="content">
         Checkout my medium 
         <a href="https://medium.com/@misterjko" target="blank">posts</a>
