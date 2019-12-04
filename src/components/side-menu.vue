@@ -4,7 +4,7 @@
     <router-link to="/timeline">Dev Journey</router-link>
     <router-link to="/sketches">Sketches</router-link>
     <router-link to="/projects">Projects</router-link>
-    <router-link to="/projects">Work</router-link>
+    <router-link to="/work">Work</router-link>
     <router-link to="/thoughts">Thoughts</router-link>
     <router-link to="/links-contacts">Links &amp; Contacts</router-link>
   </nav>
@@ -31,6 +31,7 @@ export default {
     font-size: 20px;
     padding: 10px;
     color: white;
+    text-decoration: none;
     border-left: 5px solid transparent;
     &:not(:first-of-type) {
       margin-top: 10px;

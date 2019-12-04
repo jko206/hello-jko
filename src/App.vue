@@ -5,7 +5,7 @@
     </button>
     <side-menu class="side-menu" />
     <div class="main-wrapper">
-      <div class="content-block">
+      <div class="content-block main-header">
         <span></span>
         <div class="content">
           <h1>
@@ -36,7 +36,7 @@ export default {
       const currentRoute = this.$route.path
       switch(currentRoute) {
         case '/' : 
-          return 'Welcome'
+          return ''
         case '/about' :
           return 'About Me'
         case '/timeline' :
@@ -45,6 +45,8 @@ export default {
           return 'Sketches'
         case '/projects' :
           return 'Projects'
+        case '/work' :
+          return 'Work'
         case '/thoughts' :
           return 'Thoughts'
         case '/links-contacts' :
@@ -80,7 +82,7 @@ $toggleTop: 20px;
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 20;
+  z-index: 200;
   font-size: 35px;
   align-items: center;
   display: flex;
@@ -103,10 +105,16 @@ $toggleTop: 20px;
     left: $menuWidth + $toggleLeft
   }
 }
+.main-header {
+  position: sticky;
+  top: 0;
+  background: #ffffffdd;
+  z-index: 100;
+}
+
 h1 {
   box-sizing: border-box;
   margin: 0;
-  background: white;
   width: 100%;
   position: sticky;
   top: 0;

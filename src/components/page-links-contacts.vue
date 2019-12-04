@@ -90,6 +90,7 @@ a {
     padding: 10px;
     width: 200px;
     border-left: 3px solid transparent;
+    text-decoration: none;
     &:hover {
       border-color: #333;
     }

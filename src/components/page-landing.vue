@@ -1,11 +1,13 @@
 <template>
   <div class="page-landing">
-    <h1>
-      Welcome.
-    </h1>
-    <span>
-      Let's learn about J
-    </span>
+    <div class="content-block">
+      <h1>
+        Welcome.
+      </h1>
+      <div class="content">
+        Let's learn about J
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,5 +24,8 @@ export default {
   span {
     display: block;
   }
+}
+h1 {
+  text-align: right;
 }
 </style>

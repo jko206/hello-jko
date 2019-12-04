@@ -1,6 +1,13 @@
 <template>
   <div class="page-thoughts">
-    my thoughts
+    <div class="content-block full-height">
+      <h2>Nothing's here <br /> yet</h2>
+      <div class="content">
+        Checkout my medium 
+        <a href="https://medium.com/@misterjko" target="blank">posts</a>
+        instead.
+      </div>
+    </div>
   </div>
 </template>
 
