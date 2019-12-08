@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{'show-menu' : isMenuOpen }" @click="isMenuOpen = false">
+  <div id="app" :class="{'show-menu' : isMenuOpen }">
     <button class="side-menu-toggle" @click.stop="isMenuOpen = !isMenuOpen">
       *
     </button>
