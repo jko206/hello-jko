@@ -1,5 +1,8 @@
 <template>
   <nav class="side-menu">
+    <router-link to="/" class="logo-wrapper">
+      <img src="../assets/logo.png" alt="J.Ko logo" class="logo" />
+    </router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/timeline">Dev Journey</router-link>
     <router-link to="/sketches">Sketches</router-link>
@@ -41,10 +44,16 @@ export default {
       border-color: gray;
     }
 
-    &.router-link-active {
+    &.router-link-active:not(.logo-wrapper) {
       border-color: white;
     }
   }
+}
+.logo {
+  max-width: 100px;
+}
+
+.logo-wrapper {
 }
 
 </style>
