@@ -48,12 +48,14 @@ export default {
       border-color: white;
     }
   }
+  a.logo-wrapper {
+    text-align: center;
+    border-left: none;
+  }
 }
 .logo {
   max-width: 100px;
 }
 
-.logo-wrapper {
-}
 
 </style>
