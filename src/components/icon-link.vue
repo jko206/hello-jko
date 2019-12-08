@@ -1,13 +1,20 @@
 <template>
-  <a v-if="!underConstruction" :href="link" target="_blank" :class="{disabled: underConstruction}">
+  <a v-if="!underConstruction" :href="link" target="_blank">
     <img :src="imageSrc" :alt="imageAlt" />
   </a>
-  <span v-else>
-    <img :src="imageSrc" :alt="imageAlt" />
-  </span>
+  <app-tooltip 
+    v-else 
+    :message="tooltipMessage"
+    trigger-display-style="inline-block"
+  >
+    <template v-slot:tooltip-trigger>
+      <img :src="imageSrc" :alt="imageAlt" :class="{disabled: underConstruction}"/>
+    </template>
+  </app-tooltip>
 </template>
 
 <script>
+import AppTooltip from './app-tooltip.vue'
 import githubIcon from '../assets/icons/github.png'
 import codesandboxIcon from '../assets/icons/codesandbox.png'
 
@@ -27,7 +34,7 @@ export default {
   props: {
     link: {
       type: String,
-      required: true,
+      required: false,
       validator: url => /^http(s)?/.test(url)
     },
     icon: {
@@ -41,12 +48,25 @@ export default {
       default: false,
     },
   },
+  components: {
+    AppTooltip,
+  },
   computed: {
     imageSrc() {
       return map[this.icon].src
     },
     imageAlt() {
       return map[this.icon].alt
+    },
+    tooltipMessage() {
+      switch(this.icon) {
+        case 'github' :
+          return 'I\'m in the process of migrating repositories'
+        case 'codesandbox' :
+          return 'Demo on CodeSandBox is coming soon'
+        default :
+          return ''
+      }
     },
   },
 }
