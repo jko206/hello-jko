@@ -67,7 +67,6 @@ $toggleLeft: 20px;
 $toggleTop: 20px;
 
 .main-wrapper {
-  box-shadow: #7098bb -3px -1px 10px;
   position: relative;
   left: 0;
   min-height: 100vh;
