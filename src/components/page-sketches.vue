@@ -19,10 +19,12 @@
     <div class="content-block full-height">
       <div class="title-wrapper">
         <h2>Hexagon Tiles</h2>
-        <div class="link-icons">
-          <a href="https://codesandbox.io/s/quizzical-shtern-2cx1l" target="blank">
-            <img src="../assets/codesandbox-icon.png" alt="CodeSandBox icon" />
-          </a>
+        <div class="icon-links">
+          <icon-link 
+            link="https://codesandbox.io/s/quizzical-shtern-2cx1l"
+            icon="codesandbox"
+            :underConstruction="true"
+          />
         </div>
       </div>
       <div class="content double-col">
@@ -44,16 +46,17 @@
 </template>
 
 <script>
+import IconLink from './icon-link.vue'
 export default {
-
+  name: 'PageSketches', 
+  components: {
+    IconLink,
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.link-icons {
+.icon-links {
   text-align: right;
-  img {
-    height: 20px;
-  }
 }
 </style>
