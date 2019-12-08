@@ -23,9 +23,9 @@
           <icon-link 
             link="https://codesandbox.io/s/quizzical-shtern-2cx1l"
             icon="codesandbox"
-            :underConstruction="true"
           />
         </div>
+        <tech-list :techList="['HTML', 'CSS', 'JavaScript']" />
       </div>
       <div class="content double-col">
         <p>
@@ -37,9 +37,6 @@
           This example uses grid to layout the hexagons. High school level of trigonometry
           is used to calculate the grid-row-gap and grid-column-gap. 
         </p>
-        <p class="tech-stack">
-          Used HTML / CSS / JavaScript
-        </p>
       </div>
     </div>
   </div>
@@ -47,10 +44,12 @@
 
 <script>
 import IconLink from './icon-link.vue'
+import TechList from './tech-list.vue'
 export default {
   name: 'PageSketches', 
   components: {
     IconLink,
+    TechList,
   },
 }
 </script>
