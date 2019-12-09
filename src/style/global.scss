@@ -42,3 +42,7 @@ $h1-padding: 20px;
     height: calc(100vh - #{$h1-height + 2 * $h1-padding});
   }
 }
+
+.icon-links {
+  text-align: right;
+}
