@@ -3,6 +3,13 @@ a {
   color: #333;
 }
 
+code {
+  background: #666;
+  color: white;
+  padding: 0.1em 0.25em;
+  border-radius: 0.15em;
+}
+
 p {
   line-height: 2.25;
 }
@@ -44,5 +51,6 @@ $h1-padding: 20px;
 }
 
 .icon-links {
+  margin: 20px 0;
   text-align: right;
 }
