@@ -55,7 +55,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.icon-links {
-  text-align: right;
-}
+@import '../style/global';
 </style>
