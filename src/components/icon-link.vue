@@ -21,17 +21,22 @@
 
 <script>
 import AppTooltip from './app-tooltip.vue'
-import githubIcon from '../assets/icons/github.png'
 import codesandboxIcon from '../assets/icons/codesandbox.png'
+import demoIcon from '../assets/icons/demo.png'
+import githubIcon from '../assets/icons/github.png'
 
 const map = {
-  'github' : {
-    src: githubIcon,
-    alt: 'GitHub icon',
-  },
   'codesandbox' : {
     src: codesandboxIcon,
     alt: 'CodeSandBox icon',
+  },
+  'demo' : {
+    src: demoIcon,
+    alt: 'demo icon',
+  },
+  'github' : {
+    src: githubIcon,
+    alt: 'GitHub icon',
   },
 }
 
@@ -66,10 +71,12 @@ export default {
     },
     title() {
       switch(this.icon) {
-        case 'github' :
-          return 'GitHub'
         case 'codesandbox' :
           return 'CodeSandBox'
+        case 'demo' :
+          return 'Demo'
+        case 'github' :
+          return 'GitHub'
         default :
           return false
       }
@@ -77,14 +84,18 @@ export default {
     tooltipMessage() {
       const { underConstruction, icon } = this
       switch(icon) {
-        case 'github' :
-          return underConstruction 
-            ? 'I\'m in the process of migrating repositories to GitHub'
-            : 'See work on GitHub'
         case 'codesandbox' :
           return underConstruction
             ? 'Demo on CodeSandBox is coming soon'
             : 'See work on CodeSandBox'
+        case 'demo' :
+          return underConstruction
+            ? 'Demo on CodeSandBox is coming soon'
+            : 'See the demo'
+        case 'github' :
+          return underConstruction 
+            ? 'I\'m in the process of migrating repositories to GitHub'
+            : 'See work on GitHub'
         default :
           return ''
       }
