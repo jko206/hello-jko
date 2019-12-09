@@ -1,7 +1,6 @@
 <template>
-  <div class="tooltip-wrapper">
+  <div class="tooltip-wrapper" :style="{display: triggerDisplayStyle}">
     <div class="tooltip-trigger" 
-      :style="{display: triggerDisplayStyle}"
       @click="showTooltip"
     >
       <slot name="tooltip-trigger" />

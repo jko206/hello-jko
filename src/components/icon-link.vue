@@ -1,14 +1,19 @@
 <template>
-  <a v-if="!underConstruction" :href="link" target="_blank">
-    <img :src="imageSrc" :alt="imageAlt" />
-  </a>
   <app-tooltip 
-    v-else 
     :message="tooltipMessage"
     trigger-display-style="inline-block"
   >
     <template v-slot:tooltip-trigger>
-      <img :src="imageSrc" :alt="imageAlt" :class="{disabled: underConstruction}"/>
+      <a v-if="!underConstruction" :href="link" target="_blank">
+        <img :src="imageSrc" :alt="imageAlt" />
+      </a>
+      <img
+        v-else 
+        :src="imageSrc" 
+        :alt="imageAlt" 
+        :class="{disabled: underConstruction}"
+        :title="title"
+      />
     </template>
   </app-tooltip>
 </template>
@@ -58,12 +63,27 @@ export default {
     imageAlt() {
       return map[this.icon].alt
     },
-    tooltipMessage() {
+    title() {
       switch(this.icon) {
         case 'github' :
-          return 'I\'m in the process of migrating repositories'
+          return 'GitHub'
         case 'codesandbox' :
-          return 'Demo on CodeSandBox is coming soon'
+          return 'CodeSandBox'
+        default :
+          return false
+      }
+    },
+    tooltipMessage() {
+      const { underConstruction, icon } = this
+      switch(icon) {
+        case 'github' :
+          return underConstruction 
+            ? 'I\'m in the process of migrating repositories to GitHub'
+            : 'See work on GitHub'
+        case 'codesandbox' :
+          return underConstruction
+            ? 'Demo on CodeSandBox is coming soon'
+            : 'See work on CodeSandBox'
         default :
           return ''
       }
@@ -73,6 +93,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+  display: inline-block;
+  margin-left: 10px;
+}
 img {
   height: 20px;
   &.disabled {
