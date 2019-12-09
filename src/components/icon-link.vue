@@ -1,5 +1,6 @@
 <template>
   <app-tooltip 
+    class="tooltip-wrapper"
     :message="tooltipMessage"
     trigger-display-style="inline-block"
   >
@@ -93,7 +94,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
+.tooltip-wrapper {
   display: inline-block;
   margin-left: 10px;
 }

@@ -60,8 +60,8 @@ export default {
   padding: 0.3em;
   text-align: center;
   position: absolute;
-  right: -85px;
-  width: 200px;
+  right: -135px;
+  width: 300px;
   top: -4em;
   border-radius: 3px;
   visibility: hidden;
