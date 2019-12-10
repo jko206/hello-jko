@@ -19,9 +19,13 @@
       <div class="title-wrapper">
         <h2>KenKen Solver</h2>
         <div class="icon-links">
-          <icon-link 
+          <!-- <icon-link 
             link="https://codesandbox.io/s/elated-hoover-2bnn0"
             icon="codesandbox"
+          /> -->
+          <icon-link 
+            link="https://2bnn0.csb.app/"
+            icon="demo"
           />
           <icon-link 
             icon="github"
@@ -46,9 +50,13 @@
         <h2>Knight's Tour</h2>
         <div class="icon-links">
           <icon-link 
-            link="https://codesandbox.io/s/loving-bash-s5u4q"
+            link="https://s5u4q.csb.app/"
             icon="codesandbox"
           />
+          <!-- <icon-link 
+            link="https://codesandbox.io/s/loving-bash-s5u4q"
+            icon="codesandbox"
+          /> -->
           <icon-link 
             icon="github"
             :underConstruction="true"
@@ -139,8 +147,42 @@
       </div>
     </div>
     
+    <div class="content-block full-height">
+      <div class="title-wrapper">
+        <h2>Tile Shuffle</h2>
+        <div class="icon-links">
+          <icon-link 
+            link="https://b1nok.csb.app/"
+            icon="demo"
+          />
+          <!-- <icon-link 
+            link="https://codesandbox.io/s/loving-robinson-b1nok"
+            icon="demo"
+          /> -->
+          <icon-link 
+            link="https://github.com/jaiko86/tile-shuffle"
+            icon="github"
+          />
+        </div>
+        <tech-list :techList="[
+          'HTML5', 
+          'CSS', 
+          'JavaScript', 
+          'React', 
+        ]"/>
+      </div>
+      <div class="content double-col">
+        <p>
+          Tile shuffle is a puzzle game in which a set of number
+          are shuffled on a board, and the player needs to
+          slide them back to their original positions. 
+        </p>
+      </div>
+    </div>
+    
     <!-- 
       project list:
+
         - Precision.js
      -->
   </div>
