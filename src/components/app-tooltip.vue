@@ -1,11 +1,9 @@
 <template>
-  <div class="tooltip-wrapper" :style="{display: triggerDisplayStyle}">
-    <div class="tooltip-trigger" 
-      @click="showTooltip"
-    >
+  <div class="tooltip-wrapper" :style="{ display: triggerDisplayStyle }">
+    <div class="tooltip-trigger" @click="showTooltip">
       <slot name="tooltip-trigger" />
     </div>
-    <div :class="['tooltip', {visible: isTooltipVisibile}]">
+    <div :class="['tooltip', { visible: isTooltipVisibile }]">
       {{ message }}
     </div>
   </div>
@@ -13,22 +11,23 @@
 
 <script>
 export default {
-  name: 'AppTooltip',
+  name: "AppTooltip",
   props: {
     message: {
       type: String,
       required: true,
     },
     triggerDisplayStyle: {
-      type: String, 
+      type: String,
       required: false,
-      default: 'inline-block',
-      validator: display => ['inline', 'block', 'inline-block'].includes(display)
+      default: "inline-block",
+      validator: display =>
+        ["inline", "block", "inline-block"].includes(display),
     },
   },
   data() {
     return {
-      isTooltipVisibile: false, 
+      isTooltipVisibile: false,
       timeout: null,
     }
   },
@@ -36,14 +35,14 @@ export default {
     showTooltip() {
       this.isTooltipVisibile = true
       // eslint-disable-next-line
-      console.log('here')
+      console.log("here")
       this.timeout = setTimeout(() => {
         this.isTooltipVisibile = false
       }, 3000)
     },
     hideTooltip() {
       this.isTooltipVisibile = false
-      if(this.timeout) clearTimeout(this.timeout)
+      if (this.timeout) clearTimeout(this.timeout)
       this.timeout = null
     },
   },
@@ -60,9 +59,9 @@ export default {
   padding: 0.3em;
   text-align: center;
   position: absolute;
-  right: -135px;
-  width: 300px;
-  top: -4em;
+  right: -85px;
+  width: 200px;
+  top: -2.8em;
   border-radius: 3px;
   visibility: hidden;
   font-size: 0.9em;
@@ -73,13 +72,13 @@ export default {
   }
 
   &::after {
-    content: '';
+    content: "";
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #333 #333;   
+    border-color: transparent transparent #333 #333;
     transform: rotate(-45deg);
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
   }
 }

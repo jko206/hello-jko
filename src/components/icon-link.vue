@@ -1,5 +1,5 @@
 <template>
-  <app-tooltip 
+  <app-tooltip
     class="tooltip-wrapper"
     :message="tooltipMessage"
     trigger-display-style="inline-block"
@@ -9,10 +9,10 @@
         <img :src="imageSrc" :alt="imageAlt" />
       </a>
       <img
-        v-else 
-        :src="imageSrc" 
-        :alt="imageAlt" 
-        :class="{disabled: underConstruction}"
+        v-else
+        :src="imageSrc"
+        :alt="imageAlt"
+        :class="{ disabled: underConstruction }"
         :title="title"
       />
     </template>
@@ -20,38 +20,38 @@
 </template>
 
 <script>
-import AppTooltip from './app-tooltip.vue'
-import codesandboxIcon from '../assets/icons/codesandbox.png'
-import demoIcon from '../assets/icons/demo.png'
-import githubIcon from '../assets/icons/github.png'
+import AppTooltip from "./app-tooltip.vue"
+import codesandboxIcon from "../assets/icons/codesandbox.png"
+import demoIcon from "../assets/icons/demo.png"
+import githubIcon from "../assets/icons/github.png"
 
 const map = {
-  'codesandbox' : {
+  codesandbox: {
     src: codesandboxIcon,
-    alt: 'CodeSandBox icon',
+    alt: "CodeSandBox icon",
   },
-  'demo' : {
+  demo: {
     src: demoIcon,
-    alt: 'demo icon',
+    alt: "demo icon",
   },
-  'github' : {
+  github: {
     src: githubIcon,
-    alt: 'GitHub icon',
+    alt: "GitHub icon",
   },
 }
 
 export default {
-  name: 'IconLink',
+  name: "IconLink",
   props: {
     link: {
       type: String,
       required: false,
-      validator: url => /^http(s)?/.test(url)
+      validator: url => /^http(s)?/.test(url),
     },
     icon: {
       type: String,
       required: true,
-      validator: icon => Object.keys(map).includes(icon)
+      validator: icon => Object.keys(map).includes(icon),
     },
     underConstruction: {
       type: Boolean,
@@ -70,34 +70,32 @@ export default {
       return map[this.icon].alt
     },
     title() {
-      switch(this.icon) {
-        case 'codesandbox' :
-          return 'CodeSandBox'
-        case 'demo' :
-          return 'Demo'
-        case 'github' :
-          return 'GitHub'
-        default :
+      switch (this.icon) {
+        case "codesandbox":
+          return "CodeSandBox"
+        case "demo":
+          return "Demo"
+        case "github":
+          return "GitHub"
+        default:
           return false
       }
     },
     tooltipMessage() {
       const { underConstruction, icon } = this
-      switch(icon) {
-        case 'codesandbox' :
+      switch (icon) {
+        case "codesandbox":
           return underConstruction
-            ? 'Demo on CodeSandBox is coming soon'
-            : 'See work on CodeSandBox'
-        case 'demo' :
+            ? "Demo on CodeSandBox is coming soon"
+            : "See work on CodeSandBox"
+        case "demo":
+          return underConstruction ? "Demo is coming soon" : "See the demo"
+        case "github":
           return underConstruction
-            ? 'Demo on CodeSandBox is coming soon'
-            : 'See the demo'
-        case 'github' :
-          return underConstruction 
-            ? 'I\'m in the process of migrating repositories to GitHub'
-            : 'See work on GitHub'
-        default :
-          return ''
+            ? "GitHub repo coming soon"
+            : "See work on GitHub"
+        default:
+          return ""
       }
     },
   },

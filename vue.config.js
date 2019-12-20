@@ -1,9 +1,11 @@
 module.exports = {
   chainWebpack: config => {
     config.module
-      .rule('pdf')
+      .rule("pdf")
       .test(/\.pdf$/)
-      .use('file-loader')
-      .loader('file-loader')
-  }
+      .use("file-loader")
+      .loader("file-loader")
+  },
+
+  lintOnSave: false,
 }

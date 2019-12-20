@@ -35,10 +35,13 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi" : false
   },
   "browserslist": [
     "> 1%",

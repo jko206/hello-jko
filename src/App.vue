@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{'show-menu' : isMenuOpen }">
+  <div id="app" :class="{ 'show-menu': isMenuOpen }">
     <button class="side-menu-toggle" @click.stop="isMenuOpen = !isMenuOpen">
       *
     </button>
@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import SideMenu from './components/side-menu.vue'
+import SideMenu from "./components/side-menu.vue"
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     SideMenu,
   },
@@ -33,35 +33,36 @@ export default {
   },
   computed: {
     title() {
-      const currentRoute = this.$route.path
-      switch(currentRoute) {
-        case '/' : 
-          return ''
-        case '/about' :
-          return 'About Me'
-        case '/timeline' :
-          return 'My Timeline'
-        case '/sketches' :
-          return 'Sketches'
-        case '/projects' :
-          return 'Projects'
-        case '/work' :
-          return 'Work'
-        case '/thoughts' :
-          return 'Thoughts'
-        case '/links-contacts' :
-          return 'Links & Contacts'
-        default : 
-          return ''
+      const currentSection = this.$route.path
+        .split("/")
+        .filter(e => e)
+        .shift()
+      switch (currentSection) {
+        case "about":
+          return "About Me"
+        case "timeline":
+          return "My Timeline"
+        case "sketches":
+          return "Sketches"
+        case "projects":
+          return "Projects"
+        case "work":
+          return "Work"
+        case "thoughts":
+          return "Thoughts"
+        case "links-contacts":
+          return "Links & Contacts"
+        default:
+          return ""
       }
-    }
+    },
   },
 }
 </script>
 
 <style lang="scss">
-@import './style/global.scss';
-@import './style/default.scss';
+@import "./style/global.scss";
+@import "./style/default.scss";
 
 $toggleLeft: 20px;
 $toggleTop: 20px;
@@ -101,7 +102,7 @@ $toggleTop: 20px;
   }
 
   .show-menu & {
-    left: $menuWidth + $toggleLeft
+    left: $menuWidth + $toggleLeft;
   }
 }
 .main-header {
@@ -121,5 +122,4 @@ h1 {
 .main {
   z-index: 10;
 }
-
 </style>
