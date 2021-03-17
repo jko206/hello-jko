@@ -17,6 +17,83 @@
       </div>
     </div>
 
+    <div class="content-block full-height" id="aws-desc" ref="aws">
+      <div class="title-wrapper">
+        <h2>Amazon Web Service</h2>
+        <tech-list
+          :techList="[
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'TypeScript',
+            'Java',
+            'Google Web Toolkit (GWT)',
+            'React',
+            'Redux',
+            'RxJS',
+            'Jest',
+            'SASS',
+            'REST API',
+            'AWS CLI',
+          ]"
+        />
+      </div>
+      <div class="content double-col">
+        <p>
+          Although Pilot was a exciting and promising startup, I left for a
+          simple reason: I missed Washington. People often gripe about the rain
+          and weather, but I actually like it. My friends and family are here,
+          and the neighborhoods are familiar.
+        </p>
+        <p>
+          So I got a job at AWS, and since joining, have been focused on
+          migrating from the old design to the new design of the console for
+          Elastic Load Balancing. It's not just the design that's changing,
+          however. Whereas the previous framework written in Google Web Toolkit
+          was slow in every way (dev, build, deployment), the newer framework
+          was written in react, versatile, and more light weight.
+        </p>
+      </div>
+    </div>
+    <div class="content-block full-height" id="pilot-desc" ref="pilot">
+      <div class="title-wrapper">
+        <h2>Pilot</h2>
+        <tech-list
+          :techList="[
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Vue',
+            'Vue-router',
+            'Vuex',
+            'Vue-test-util',
+            'Jest',
+            'SASS',
+            'Responsive Design',
+          ]"
+        />
+      </div>
+      <div class="content double-col">
+        <p>
+          Although I made money with my previous development experience, the
+          role as a Front End Engineer at Pilot.com was actually the first job I
+          landed as a developer in a company.
+        </p>
+        <p>
+          As such, it was a growing and learning experience. It was my first
+          time working with other engineers, designers, PM, and engineering
+          manager. I also learned how a start up, well, starts, and how a big
+          website gets built one line at a time. It was my first time being
+          exposed to CI/CD pipeline, and how things are built from the ground
+          up. My company used AWS, so it was actually my first time seeing how a
+          services like ours used cloud computing.
+        </p>
+        <p>
+          All in all, I learned more non-technical and architectural things than
+          technical skills. It was a great learning opportunity.
+        </p>
+      </div>
+    </div>
     <div
       class="content-block full-height"
       id="math-test-ninja-desc"

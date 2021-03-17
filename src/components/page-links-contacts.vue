@@ -21,16 +21,8 @@
             <a href="https://medium.com/@j-ko" target="blank">Medium</a>
           </li>
           <li>
-            <a
-              href="https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com/o/JAI%20KO.pdf?alt=media&token=1f117c71-2b8a-4086-b786-449686faf9fb"
-              >Résumé</a
-            >
-            <a
-              href="https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com/o/JAI%20KO.pdf?alt=media&token=1f117c71-2b8a-4086-b786-449686faf9fb"
-              download=""
-              class="button"
-              >download</a
-            >
+            <a :href="resume">Résumé</a>
+            <a :href="resume" download="" class="button">download</a>
           </li>
         </ul>
       </div>
@@ -40,7 +32,7 @@
       <div class="content">
         <ul>
           <li>
-            <a href="mailto:just.jai.ko@gmail.com"> Email </a>
+            <a href="mailto:me@j-ko.dev"> Email </a>
             <button @click.stop="copy('email')">copy</button>
           </li>
           <li>
@@ -64,12 +56,19 @@ function copy(val) {
 
 export default {
   name: "PageLinksContacts",
+  data() {
+    return {
+      resume:
+        "https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com" +
+        "/o/J-KO.pdf?alt=media&token=5f245042-bc3b-4f31-b567-503177241d2f",
+    }
+  },
   methods: {
     copy(entity) {
-      const value = entity === "phone" ? "4252205899" : "just.jai.ko@gmail.com"
+      const value = entity === "phone" ? "4252205899" : "me@j-ko.dev"
       copy(value)
         .then(() => {
-          alert("success")
+          alert(`Copied ${entity === "phone" ? "phone number" : "email"}`)
         })
         .catch(e => {
           alert(e)
