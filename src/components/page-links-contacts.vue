@@ -11,14 +11,26 @@
             <a href="http://github.com/jaiko86" target="blank">Github</a>
           </li>
           <li>
-            <a href="https://stackoverflow.com/users/458425/j-ko?tab=profile" target="blank">StackOverflow</a>
+            <a
+              href="https://stackoverflow.com/users/458425/j-ko?tab=profile"
+              target="blank"
+              >StackOverflow</a
+            >
           </li>
           <li>
-            <a href="https://medium.com/@MisterJKo" target="blank">Medium</a>
+            <a href="https://medium.com/@j-ko" target="blank">Medium</a>
           </li>
           <li>
-            <a href="JAI_KO.pdf">Résumé</a>
-            <a href="JAI_KO.pdf" download="" class="button">download</a>
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com/o/JAI%20KO.pdf?alt=media&token=1f117c71-2b8a-4086-b786-449686faf9fb"
+              >Résumé</a
+            >
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com/o/JAI%20KO.pdf?alt=media&token=1f117c71-2b8a-4086-b786-449686faf9fb"
+              download=""
+              class="button"
+              >download</a
+            >
           </li>
         </ul>
       </div>
@@ -28,28 +40,16 @@
       <div class="content">
         <ul>
           <li>
-            <a href="mailto:just.jai.ko@gmail.com">
-              Email
-            </a>
-            <button @click.stop="copy('email')">
-              copy
-            </button>
+            <a href="mailto:just.jai.ko@gmail.com"> Email </a>
+            <button @click.stop="copy('email')">copy</button>
           </li>
           <li>
-            <a href="sms:+14252205899">
-              Text
-            </a>
-            <button @click.stop="copy('phone')">
-              copy
-            </button>
+            <a href="sms:+14252205899"> Text </a>
+            <button @click.stop="copy('phone')">copy</button>
           </li>
           <li>
-            <a href="tel:+14252205899">
-              Phone
-            </a>
-            <button @click.stop="copy('phone')">
-              copy
-            </button>
+            <a href="tel:+14252205899"> Phone </a>
+            <button @click.stop="copy('phone')">copy</button>
           </li>
         </ul>
       </div>
@@ -63,40 +63,40 @@ function copy(val) {
 }
 
 export default {
-  name: 'PageLinksContacts',
+  name: "PageLinksContacts",
   methods: {
     copy(entity) {
-      const value = entity === 'phone' ? '4252205899' : 'just.jai.ko@gmail.com'
+      const value = entity === "phone" ? "4252205899" : "just.jai.ko@gmail.com"
       copy(value)
         .then(() => {
-          alert('success')
+          alert("success")
         })
         .catch(e => {
           alert(e)
         })
-    }
+    },
   },
 }
 </script>
 <style lang="scss" scoped>
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 a {
-    display: inline-block;
-    padding: 10px;
-    width: 200px;
-    border-left: 3px solid transparent;
-    text-decoration: none;
-    &:hover {
-      border-color: #333;
-    }
+  display: inline-block;
+  padding: 10px;
+  width: 200px;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  &:hover {
+    border-color: #333;
+  }
 }
 
-button, .button {
+button,
+.button {
   padding: 0 1em;
   width: 100px;
   text-align: center;

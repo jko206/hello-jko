@@ -3,8 +3,8 @@
     <div class="content-block full-height">
       <h2>Nothing's here yet</h2>
       <div class="content">
-        Checkout my medium 
-        <a href="https://medium.com/@misterjko" target="blank">posts</a>
+        Checkout my medium
+        <a href="https://medium.com/@j-ko" target="blank">posts</a>
         instead.
       </div>
     </div>
@@ -12,11 +12,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
-<style>
-
-</style>
+<style></style>
