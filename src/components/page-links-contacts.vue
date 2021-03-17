@@ -59,8 +59,8 @@ export default {
   data() {
     return {
       resume:
-        "https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com" +
-        "/o/J-KO.pdf?alt=media&token=5f245042-bc3b-4f31-b567-503177241d2f",
+        "https://firebasestorage.googleapis.com/v0/b/j-ko-dev.appspot.com/" +
+        "o/J-KO.pdf?alt=media&token=253274fb-b99d-41b0-82bf-dc1e21d341e9",
     }
   },
   methods: {
